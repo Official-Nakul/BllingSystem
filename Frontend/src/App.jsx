@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import DashBoard from "./Components/DashBoard/DashBoard";
 import CustomerDetail from "./Components/CustomerDetail/CustomerDetail";
+import { Invoice } from "./Components/Invoice/Invoice";
+// import Invoice from "./Invoice/Invoice"; // Make sure to adjust the path
 
 function App() {
   const [data, setData] = useState([]);
@@ -25,6 +27,8 @@ function App() {
         <Routes>
           <Route path="/" element={<DashBoard customerData={data} />} />
           <Route path="/customer/:id" element={<CustomerDetail />} />
+          <Route path="/invoice/:id" element={<Invoice />} />{" "}
+          {/* Add this line */}
         </Routes>
       </div>
     </Router>

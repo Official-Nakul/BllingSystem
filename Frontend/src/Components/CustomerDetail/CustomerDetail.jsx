@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { NameCard, StatusBtn, BillBtn } from "../buttons/buttons";
 import { OrderForm } from "../Form/Form";
@@ -10,25 +10,6 @@ const CustomerDetail = () => {
   const [customer, setCustomer] = useState(null);
   const [orders, setOrders] = useState([]);
   const [pendingAmt, setPendingAmt] = useState(0);
-
-  const handleAddOrder = async (customer) => {
-    try {
-      const order = {
-        price: 10, // Example price, you can replace with actual value
-        quantity: 2, // Example quantity, you can replace with actual value
-        CId: customer._id, // Assuming customer object has an id property
-      };
-
-      const response = await axios.post("/api/orders", order);
-      if (response.status === 201) {
-        console.log("Order added successfully");
-      } else {
-        console.error("Failed to add order");
-      }
-    } catch (error) {
-      console.error("There was an error adding the order!", error);
-    }
-  };
 
   useEffect(() => {
     axios
@@ -95,7 +76,9 @@ const CustomerDetail = () => {
           <div className="flex flex-col justify-center items-center gap-3 ">
             <StatusBtn value={customer.status} size={"xl"} />
             <div className=" flex justify-center items-center gap-6">
-              <BillBtn />
+              <Link to={`/invoice/${customer._id}`}>
+                <BillBtn />
+              </Link>
               <OrderForm customer={customer} />
             </div>
           </div>

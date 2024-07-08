@@ -22,12 +22,12 @@ const DashBoard = ({ customerData }) => {
             .includes(search.toLowerCase())
         )
         .map((cust, index) => (
-          <Link
-            key={index}
-            to={`/customer/${cust._id}`} // Use cust.id or any unique identifier for your customers
-            className="customerContainer flex justify-center items-center"
-          >
-            <div className="customer flex justify-between items-center">
+          <div className="customer flex justify-between items-center">
+            <Link
+              key={index}
+              to={`/customer/${cust._id}`} // Use cust.id or any unique identifier for your customers
+              className="customerContainer flex justify-center items-center"
+            >
               <div className="flex justify-center items-center gap-2">
                 <NameCard name={cust.first_name} size={"sm"} />
               </div>
@@ -36,16 +36,18 @@ const DashBoard = ({ customerData }) => {
                 <p>{cust.last_name}</p>
                 <p>{cust.address}</p>
               </div>
-              <div className="flex justify-center items-center gap-2">
-                <StatusBtn
-                  value={cust.status}
-                  onClick={(e) => e.stopPropagation()}
-                  size={"sm"}
-                />
-                <BillBtn onClick={(e) => e.stopPropagation()} />
-              </div>
+            </Link>
+            <div className="flex justify-center items-center gap-2">
+              <StatusBtn
+                // className=" cursor-pointer"
+                value={cust.status}
+                size={"sm"}
+              />
+              <Link to={`/invoice/${cust._id}`}>
+                <BillBtn />
+              </Link>
             </div>
-          </Link>
+          </div>
         ))}
     </div>
   );

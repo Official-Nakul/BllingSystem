@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "./buttons.css";
 import search from "/search.svg";
 
@@ -19,7 +20,7 @@ export const StatusBtn = ({ value, size }) => {
         name="status"
         value={status}
         onChange={handleChange}
-        className="bg-transparent"
+        className="bg-transparent cursor-pointer"
       >
         <option value="Pending">Pending</option>
         <option value="Completed">Completed</option>
@@ -29,8 +30,17 @@ export const StatusBtn = ({ value, size }) => {
 };
 
 export const BillBtn = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate("/Invoice/:id"); // Update the path as needed
+  };
+
   return (
-    <div className=" flex justify-center items-center btn-bill cursor-pointer">
+    <div
+      className="flex justify-center items-center btn-bill cursor-pointer"
+      onClick={handleButtonClick}
+    >
       Generate Bill
     </div>
   );
