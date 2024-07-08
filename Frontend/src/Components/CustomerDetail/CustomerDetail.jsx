@@ -69,13 +69,13 @@ const CustomerDetail = () => {
       <div>
         <div className="flex justify-between items-center">
           <NameCard name={customer.first_name} size={"l"} />
-          <div className="flex flex-col justify-center items-center mr-auto ml-12">
+          <div className="flex flex-col justify-center items-center mr-auto ml-12 self-start">
             <div className="flex justify-center items-center text-lg font-medium gap-2 self-start">
               <p>{customer.first_name}</p>
               <p>{customer.last_name}</p>
             </div>
-            <p className="text-lg font-medium">{customer.number}</p>
-            <p className="text-lg font-medium">{customer.address}</p>
+            <p className="text-lg font-medium self-start">{customer.number}</p>
+            <p className="text-lg font-medium self-start">{customer.address}</p>
           </div>
 
           <div className="flex flex-col justify-center items-center mr-auto gap-2">
@@ -96,7 +96,7 @@ const CustomerDetail = () => {
             <StatusBtn value={customer.status} size={"xl"} />
             <div className=" flex justify-center items-center gap-6">
               <BillBtn />
-              <OrderForm />
+              <OrderForm customer={customer} />
             </div>
           </div>
         </div>
