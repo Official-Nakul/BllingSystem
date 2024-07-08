@@ -1,0 +1,103 @@
+.btn-status-sm {
+  height: 3em;
+  width: 10em;
+  padding: 0 1rem 0 1rem;
+  background-color: var(--bg-secondary);
+  border-radius: 25px;
+}
+.btn-status-sm > select {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  height: inherit;
+  width: inherit;
+  /* background-color: var(--bg-secondary); */
+  border-radius: 25px;
+}
+.btn-status-sm > select:focus {
+  border: none;
+  outline: none;
+}
+.btn-status-xl {
+  height: 3em;
+  width: 21em;
+  padding: 0 1rem 0 1rem;
+  background-color: var(--bg-secondary);
+  border-radius: 25px;
+}
+.btn-status-xl > select {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  height: inherit;
+  width: inherit;
+  /* background-color: var(--bg-secondary); */
+  border-radius: 25px;
+}
+.btn-status-xl > select:focus {
+  border: none;
+  outline: none;
+}
+
+/* -------------------------------- */
+
+.btn-bill {
+  height: 3em;
+  width: 10em;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-secondary);
+  border-radius: 25px;
+}
+/* -------------------------------- */
+
+.searchbar {
+  height: 3em;
+  width: 100%;
+  padding-left: 1rem;
+  background-color: var(--bg-secondary);
+  border-radius: 25px;
+}
+.searchbar > input {
+  height: inherit;
+  width: inherit;
+  box-sizing: border-box;
+  padding: 0 0.5rem 0 0.5rem;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 450;
+}
+.searchbar > input::placeholder {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 450;
+}
+.searchbar > input:focus {
+  border: none;
+  outline: none;
+}
+
+/* -------------------------------- */
+
+.name-card-sm {
+  height: 3em;
+  width: 3em;
+  border-radius: 100%;
+}
+.name-card-sm > p {
+  color: white;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.name-card-l {
+  height: 4em;
+  width: 4em;
+  border-radius: 100%;
+}
+.name-card-l > p {
+  color: white;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}

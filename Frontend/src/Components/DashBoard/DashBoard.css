@@ -1,0 +1,25 @@
+.dashboardContainer {
+  height: 100%;
+  width: 100%;
+}
+::after .searchContainer {
+  height: fit-content;
+  width: 100%;
+}
+.customerContainer,
+.customer {
+  width: inherit;
+}
+.customerContainer {
+  margin-top: 1.5em;
+}
+.customerDetails {
+  /* width: 25%; */
+  justify-self: flex-start;
+  margin-right: auto;
+  margin-left: 5em;
+  gap: 2em;
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+}

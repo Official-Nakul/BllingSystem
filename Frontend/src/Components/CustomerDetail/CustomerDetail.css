@@ -1,0 +1,29 @@
+.orderTableContainer {
+  margin-top: 2em;
+  width: 100%;
+}
+
+.orderTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.2em;
+}
+
+.orderTable th,
+.orderTable td {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  text-align: left;
+}
+
+.orderTable th {
+  background-color: #f4f4f4;
+}
+
+.orderTable td {
+  border-right: 1px solid #ccc;
+}
+
+.orderTable tr:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}

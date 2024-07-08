@@ -1,0 +1,22 @@
+/* * {
+  overflow: hidden;
+} */
+* {
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --bg-primary: #fff2d7;
+  --bg-secondary: #ffe0b5;
+  --fs-primary: #f8c794;
+  --fs-secondary: #d8ae7e;
+  --fs-black: #000000;
+  background-color: var(--bg-primary);
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 50px [content-start] 1fr [content-end] 50px;
+  margin-top: 2.5em;
+}
+.wrapper > * {
+  grid-column: content;
+}

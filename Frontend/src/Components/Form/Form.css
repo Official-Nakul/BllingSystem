@@ -1,0 +1,22 @@
+.btn-add {
+  height: 3em;
+  width: 10em;
+  background-color: var(--bg-secondary);
+  border-radius: 25px;
+}
+.btn-add:hover img {
+  transform: rotate(90deg);
+}
+.btn-add > p {
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: var(--fs-black);
+}
+.btn-add > img {
+  transition: transform 500ms;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+/* -------------------------------- */
